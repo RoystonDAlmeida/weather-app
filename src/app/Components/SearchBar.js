@@ -35,16 +35,12 @@ const SearchBar = ({ address }) => {
             params.set('location', term);
             replace(`${pathname}?${params.toString()}`);
 
-            // Add a delay before making the API call
-            await delay(10000); // Wait for 10 seconds
-
             // Fetch matching cities
             setLoading(true);
             try {
                 const response = await fetch(`/api/OpenWeatherLocation?location=${term}`);
                 if (response.ok) {
                     const data = await response.json();
-                    console.log(data);
                     setSearchResults(data); // Assuming data is an array of location objects with weather data
                 }
             } catch (error) {
@@ -79,7 +75,7 @@ const SearchBar = ({ address }) => {
         // Set a new timeout to delay the API call
         const newTimeoutId = setTimeout(() => {
             handleSearch(term);
-        }, 10000); // Delay for 10 seconds
+        }, ); // Delay for 10 seconds
 
         setTimeoutId(newTimeoutId); // Store the new timeout ID
     };
