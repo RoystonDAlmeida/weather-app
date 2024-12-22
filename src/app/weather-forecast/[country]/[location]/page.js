@@ -8,10 +8,12 @@ import CurrentWeather from '../../WeatherComponents/CurrentWeather';
 import WeatherMap from '../../WeatherComponents/WeatherMap';
 import TodaysWeather from '../../WeatherComponents/TodaysWeather';
 import HourlyWeather from '../../WeatherComponents/HourlyWeather';
+import TenDaysWeatherForecast from '../../WeatherComponents/TenDaysWeatherForecast';
+import WeatherInfoBox from '../../WeatherComponents/WeatherInfoBox';
+import SunInfoBox from '../../WeatherComponents/SunInfoBox';
 
 const WeatherDetails = ({params}) => {
     const { country, location } = React.use(params); // Accessing dynamic parameters
-    console.log(country, location);
 
     const [weatherData, setWeatherData] = useState(null);
     const [loading, setLoading] = useState(true);
@@ -68,6 +70,17 @@ const WeatherDetails = ({params}) => {
                 <Box sx={{ width: '50%', margin: '0 auto' }}>
                     {/* Render your hourly weather data here */}
                     {weatherData && <HourlyWeather weatherData = {weatherData}/>}
+                </Box>
+                <Box sx={{ width: '50%', margin: '0 auto' }}>
+                    {/* Render your Ten-days weather forecast here */}
+                    {weatherData && <TenDaysWeatherForecast weatherData = {weatherData}/>}
+                </Box>
+                <Box sx={{ width: '50%', margin: '0 auto', display: 'flex', flexDirection:'row' }}>
+                    {/* Render your weather info(pressure, humidity etc) here */}
+                    {weatherData && <WeatherInfoBox weatherData = { weatherData }/>}
+
+                    {/* Render your sunrise and sunset information here */}
+                    {weatherData && <SunInfoBox weatherData = { weatherData }/>}
                 </Box>
             </Box>
         </ClientLayout>
