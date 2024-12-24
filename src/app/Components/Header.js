@@ -11,6 +11,7 @@ import Button from '@mui/material/Button';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Image from 'next/image'; // Import Image for weather icon
 import { getCountryFlagEmoji } from '../utils/getCountryFlagEmoji';
+import { useRouter } from 'next/navigation'; // Import useRouter from next/router
 
 // Create a theme with custom colors
 const theme = createTheme({
@@ -47,6 +48,8 @@ const Header = ({ cityName, country, temperature, weatherIcon, loading }) => {
     
     // Get the flag emoji for the country
     const flagEmoji = country? getCountryFlagEmoji(country):''; // Assuming country is a 2-letter country code
+
+    const router = useRouter(); // Initialize useRouter
 
     return (
         <ThemeProvider theme={theme}>
@@ -98,7 +101,7 @@ const Header = ({ cityName, country, temperature, weatherIcon, loading }) => {
                             fontWeight: 'bold',
                             color: '#ffffff',
                         }} 
-                        onClick={() => alert('Button Clicked!')} // Example click handler
+                        onClick={() => router.push('/SavedLocations')} // Navigate to SavedLocations component
                     >
                         View Saved Locations
                     </Button>
