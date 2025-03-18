@@ -23,7 +23,7 @@ Welcome to the Weather App! This application provides real-time weather data for
 
 ## Demo
 
-<img src="./public/optimized.gif" alt="Weather App Demo" width="800" height="500">
+<img src="./public/optimized.gif" alt="Weather App Demo" width="700" height="400">
 
 ## Features
 
