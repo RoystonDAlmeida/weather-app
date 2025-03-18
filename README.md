@@ -2,19 +2,28 @@
 
 ## Table of Contents
 
-- [Introduction](#introduction)
-- [Features](#features)
-- [Technologies Used](#technologies-used)
-- [Getting Started](#getting-started)
-- [Usage](#usage)
-- [API Integration](#api-integration)
-- [Contributing](#contributing)
-- [License](#license)
-- [Contact](#contact)
+- [Weather App](#weather-app)
+  - [Table of Contents](#table-of-contents)
+  - [Introduction](#introduction)
+  - [Demo](#demo)
+  - [Features](#features)
+  - [Technologies Used](#technologies-used)
+  - [Getting Started](#getting-started)
+    - [Prerequisites](#prerequisites)
+    - [Installation](#installation)
+  - [Usage](#usage)
+  - [API Integration](#api-integration)
+  - [Contributing](#contributing)
+  - [License](#license)
+  - [Contact](#contact)
 
 ## Introduction
 
 Welcome to the Weather App! This application provides real-time weather data for various locations around the world. Users can search for cities and view current weather conditions, forecasts, and more.
+
+## Demo
+
+<img src="./public/optimized.gif" alt="Weather App Demo" width="800" height="500">
 
 ## Features
 
