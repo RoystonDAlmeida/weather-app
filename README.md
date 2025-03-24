@@ -5,7 +5,6 @@
 - [Weather App](#weather-app)
   - [Table of Contents](#table-of-contents)
   - [Introduction](#introduction)
-  - [Demo](#demo)
   - [Features](#features)
   - [Technologies Used](#technologies-used)
   - [Getting Started](#getting-started)
@@ -21,9 +20,9 @@
 
 Welcome to the Weather App! This application provides real-time weather data for various locations around the world. Users can search for cities and view current weather conditions, forecasts, and more.
 
-## Demo
+<!-- ## Demo
 
-<img src="./public/demo_optimized.gif" alt="Weather GIF" style="max-width: 100%; height: auto; display: block; margin: 0 auto;">
+<img src="./public/demo_optimized.gif" alt="Weather GIF" style="max-width: 100%; height: auto; display: block; margin: 0 auto;"> -->
 
 ## Features
 
